@@ -31,7 +31,7 @@ def main() -> None:
     options.add_argument("--disable-extensions")
     options.add_argument("--disable-session-crashed-bubble")
     options.add_argument("--no-first-run")
-
+    options.add_argument("--ozone-platform=x11")
 
     driver = webdriver.Chrome(options=options)
     wait = WebDriverWait(driver, 30)

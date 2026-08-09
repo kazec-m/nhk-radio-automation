@@ -1,8 +1,8 @@
 #!/bin/bash
 set -a
-source "$(dirname "$0")/.env"
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+source "$SCRIPT_DIR/.env"
 set +a
-
 export XDG_RUNTIME_DIR=/run/user/1000
 pactl set-default-sink "$ECHO_SINK_NAME"
 sleep 5
