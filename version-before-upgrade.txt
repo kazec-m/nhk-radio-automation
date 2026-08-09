@@ -1,0 +1,16 @@
+wireplumber:
+  インストールされているバージョン: 0.4.13-1
+  候補:               0.4.13-1
+  バージョンテーブル:
+ *** 0.4.13-1 500
+        500 http://raspbian.raspberrypi.com/raspbian bookworm/main armhf Packages
+        100 /var/lib/dpkg/status
+pipewire:
+  インストールされているバージョン: 1.2.7-1~bpo12+1+rpt5
+  候補:               1.2.7-1~bpo12+1+rpt5
+  バージョンテーブル:
+ *** 1.2.7-1~bpo12+1+rpt5 500
+        500 http://archive.raspberrypi.com/debian bookworm/main armhf Packages
+        100 /var/lib/dpkg/status
+     0.3.65-3+deb12u1 500
+        500 http://raspbian.raspberrypi.com/raspbian bookworm/main armhf Packages
