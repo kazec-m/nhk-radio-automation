@@ -1,6 +1,6 @@
-# NHKラジオ「ビジネス英会話」自動再生(Amazon Echo)
+# NHK「ラジオビジネス英語」自動再生(Amazon Echo)
 
-NHKラジオ「ビジネス英会話」の聞き逃し配信を、毎朝6時に自動再生するRaspberry Pi用スクリプト集です。Seleniumでブラウザ操作を自動化し、Bluetooth(A2DP)経由でAmazon Echoから音声を流します。
+NHK「ラジオビジネス英語」の聞き逃し配信を、毎朝6時に自動再生するRaspberry Pi用スクリプト集です。Seleniumでブラウザ操作を自動化し、Bluetooth(A2DP)経由でAmazon Echoから音声を流します。
 
 開発の経緯・技術選定・トラブルシューティングの詳細は、こちらのQiita記事にまとめています。
 
