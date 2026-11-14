@@ -95,6 +95,18 @@ crontab -e
 | `.gitignore` | `.env`・ログ等、公開しない対象の除外設定 |
 | `version-before-upgrade.txt` | OSS Issue対応時に確認した、アップグレード前のパッケージバージョン記録 |
 
+## Bluetooth音声出力のエラー確認
+
+`pactl set-default-sink` が失敗した場合、実行日時と終了コードを標準エラー出力に記録します。
+
+cronの出力を `nhk_cron.log` に保存している場合は、次のコマンドでエラーを確認できます。
+
+```bash
+grep 'pactl set-default-sink failed' /path/to/nhk_cron.log
+```
+
+エラーが発生しても、後続の再生処理は継続します。
+
 ## 既知の制限
 
 - 子供の枕元用の有線出力ルートは未実装
