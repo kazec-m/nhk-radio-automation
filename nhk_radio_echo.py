@@ -4,15 +4,17 @@ from datetime import datetime
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 def click_latest_play(driver: webdriver.Chrome, wait: WebDriverWait) -> None:
     play_locator = (
         By.XPATH,
-        "//a[contains(normalize-space(.), 'このページで再生') or contains(normalize-space(.), '再生')]"
-        "|//button[contains(normalize-space(.), 'このページで再生') or contains(normalize-space(.), '再生')]",
+        (
+            "//a[contains(normalize-space(.), 'このページで再生') or contains(normalize-space(.), '再生')]"
+            "|//button[contains(normalize-space(.), 'このページで再生') or contains(normalize-space(.), '再生')]"
+        ),
     )
 
     play_button = wait.until(EC.element_to_be_clickable(play_locator))
