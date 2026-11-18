@@ -95,6 +95,26 @@ crontab -e
 | `.gitignore` | `.env`・ログ等、公開しない対象の除外設定 |
 | `version-before-upgrade.txt` | OSS Issue対応時に確認した、アップグレード前のパッケージバージョン記録 |
 
+## WindowsからRaspberry PiへのSSH接続（家庭内LAN）
+
+WindowsのPowerShellから、同じ家庭内LANにあるRaspberry PiへSSH接続できます（2026年11月18日に接続を確認）。
+
+```powershell
+ssh PI_USER@PI_IP_ADDRESS
+```
+
+`PI_USER` はRaspberry Piのユーザー名、`PI_IP_ADDRESS` はRaspberry PiのIPアドレスに置き換えます。ログイン後は、次の読み取り専用コマンドで接続先を確認できます。
+
+```bash
+whoami
+hostname -I
+exit
+```
+
+初回接続時はホスト鍵の指紋をRaspberry Pi本体で確認してから承認します。IPアドレス・ユーザー名・パスワード・秘密鍵などの接続情報をリポジトリに記載しないでください。ルーターでSSH用ポートをインターネットに公開しません。
+
+SSH鍵認証への移行、再起動後の接続確認、Bluetoothログ調査は今後の課題です（Issue #9・#10）。
+
 ## Bluetooth音声出力のエラー確認
 
 `pactl set-default-sink` が失敗した場合、実行日時と終了コードを標準エラー出力に記録します。
