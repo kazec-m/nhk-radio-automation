@@ -2,8 +2,8 @@ import os
 import time
 from datetime import datetime
 
-from selenium.common.exceptions import WebDriverException
 from selenium import webdriver
+from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
